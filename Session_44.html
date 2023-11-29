@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 44</title>
+    <style>
+        p{
+            text-align: center;
+        }
+        h1{
+            text-align: center;
+            background-color: blue;
+            color: white;
+        }
+        body{
+            background-color: khaki;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Codeyoung : Calculate days between dates</h1> 
+    <p> <b> Enter date1 </b> </p>
+    <input type="date" id="dateInput1"> <br> <br> 
+    <p> <b> Enter date2  </b> </p>
+    <input type="date" id="dateInput2"> <br> <br>     
+    <button onclick="daysDifference()"> Calculate number of days </button> 
+    <p id="output"></p>
+    <script>
+        // let text = "Mr. Bhuvanesh has a blue house";
+        // let position = text.search(/blue/);
+        // document.write(position);
+        // let text = "hey Bhuvanesh1";
+        // const re = /[A-Z]/;
+        // const num = /[0-9]/;
+        // document.write(text.search(re)+"<br>");
+        // document.write(text.search(num));
+        // const date1 = new Date();
+        // document.write(date1+"<br>");
+        // const date2 = new Date(5000);
+        // document.write(date2+"<br>");
+        // const date3 = new Date("11/22/2023");
+        // document.write(date3+"<br>");
+        // const date4 = new Date("2022,11,25,20,59,33,5000");
+        // document.write(date4+"<br>");
+    
+       function daysDifference() {
+         var dateI1 = document.getElementById("dateInput1").value;
+         var dateI2 = document.getElementById("dateInput2").value;
+         const date1 = new Date(dateI1);
+         const date2 = new Date(dateI2);
+         var time_difference = date2.getTime() - date1.getTime();
+         var result = time_difference / (1000 * 60 * 60 * 24);
+         document.getElementById("output").innerHTML=(Math.abs(result));
+       }
+      </script>  
+
+</body>
+</html>
